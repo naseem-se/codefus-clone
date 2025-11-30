@@ -1,0 +1,89 @@
+
+@import 'tailwindcss';
+
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #000000;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Marquee Animations */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee-rtl {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-scroll {
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-scroll-rtl {
+  animation: marquee-rtl 20s linear infinite;
+}
+
+
+
+/* Make bullets white */
+.pricing-swiper .swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.4;
+}
+
+/* Active bullet */
+.pricing-swiper .swiper-pagination-bullet-active {
+  background: white !important;
+  opacity: 1;
+}
+
+/* Position pagination BELOW the card not on it */
+.pricing-swiper .swiper-pagination {
+  position: relative !important;
+  bottom: -10px !important;
+  margin-top: 20px;
+}
+
+/* Hide bullets on desktop screens */
+@media (min-width: 1024px) {
+  .pricing-swiper .swiper-pagination {
+    display: none !important;
+  }
+}
+
+.swiper-pagination{
+  margin-bottom: 15px !important;
+}
+
+@media (max-width: 768px) {
+  .mp-0{
+    padding: 5px !important;
+  }
+  .mf-28{
+    font-size: 28px;
+  }
+  .mt-110{
+    margin-top: -110px;
+  }
+}
